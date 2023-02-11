@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="163.76" height="74.2" viewBox="0 0 163.76 74.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ffb419;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Landing">
+      <g id="Content">
+        <path class="cls-1" d="M161.26,29.06H15.78A13.28,13.28,0,0,1,2.5,15.78h0A13.29,13.29,0,0,1,15.78,2.5h.78A13.28,13.28,0,0,1,29.84,15.78V71.7"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="20" viewBox="0 0 320 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ffb419;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 20px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="branding">
+      <line class="cls-1" x1="10" y1="10" x2="310" y2="10"/>
+    </g>
+  </g>
+</svg>
