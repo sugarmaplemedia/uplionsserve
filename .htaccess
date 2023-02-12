@@ -1,0 +1,13 @@
+ErrorDocument 404 /
+
+Redirect 301 /cc /childhoodcancer
+Redirect 301 /childhood-cancer /childhoodcancer
+Redirect 301 /itrekkedtheup /childhoodcancer/events/itrekkedtheup
+Redirect 301 /childhoodcancer/bike4kids /childhoodcancer/events/bike4kids
+Redirect 302 /childhoodcancer/events/bike4kids https://tourdayoopeh.com/childhoodcancer
+
+Redirect 301 /dad /defenseagainstdiabetes
+Redirect 301 /defense-against-diabetes /defenseagainstdiabetes
+Redirect 301 /defenseagainstdiabetes/education.html /defenseagainstdiabetes/education
+Redirect 301 /defenseagainstdiabetes/prevention.html /defenseagainstdiabetes/prevention
+Redirect 301 /defenseagainstdiabetes/management.html /defenseagainstdiabetes/self-management

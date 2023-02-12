@@ -1,0 +1,1105 @@
+/*
+U.P. LIONS SERVE
+PAGE: LANDING
+AUTHOR: HARRISON BOUCHE & COLE ROBERT FISHER
+MODIFIED: 8.29.2021
+*/
+
+:root {
+
+    --a: #FFC651; /* rgb(255, 180, 25) */
+    --b: #D79E32; /* rgb(75, 100, 150) */
+    --c: #00BBDF; /* rgb(255, 227, 166) */
+    --d: #008ED0; /* rgb(255, 227, 166) */
+
+    --white90: rgba(255,255,255,0.9);
+
+    --fonta: 'Sen', sans-serif;
+}
+
+/* VARIABLES ^ */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    color: black;
+}
+
+* {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+a, li {
+    list-style-type: none;
+}
+
+/* RESET ^ */
+
+body {
+    overflow-x: hidden;
+}
+
+/* BODY ^ */
+
+.fonta {
+    font-family: var(--fonta);
+    font-weight: 500;
+    line-height: inherit;
+    font-size: 1em;
+}
+
+.fontb {
+    font-family: var(--fontb);
+    font-weight: 500;
+    line-height: inherit;
+    font-size: 1em;
+}
+
+.fontc {
+    font-family: var(--fontc);
+    font-weight: 500;
+    line-height: inherit;
+    font-size: 1em;
+}
+
+.bold1 {
+    font-weight: 900;
+}
+
+.big125 {
+    font-size: 1.25em;
+}
+
+.big15 {
+    font-size: 1.5em;
+}
+
+.big175 {
+    font-size: 1.75em;
+}
+
+.big2 {
+    font-size: 2em;
+}
+
+.big25 {
+    font-size: 2.5em;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* FONTS ^ */
+
+.colora {
+    color: var(--a);
+}
+
+.colorb {
+    color: var(--b);
+}
+
+.colorc {
+    color: var(--c);
+}
+
+.backcolora {
+    background: var(--a);
+}
+
+.backcolorb {
+    background: var(--b);
+}
+
+.backcolorc {
+    background: var(--c);
+}
+
+/* COLORS ^ */
+
+.hidden {
+    display: none !important;
+}
+
+* {
+    font-family: var(--fonta);
+    color: #FFFFFF;
+}
+
+body {
+    background: radial-gradient(circle at top right,#FFCC4E,#F15D3F);
+}
+
+.comingSoon {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+main.cause div.programBanner a.comingSoon:hover::before, main.cause footer.programBanner a.comingSoon:hover::before {
+    transform: translate(6px,-3px);
+}
+
+main.cause div.programBanner a.comingSoon:hover::after,main.cause footer.programBanner a.comingSoon:hover::after {
+    transform: translate(-6px,3px);
+}
+
+/* PRESETS ^ */
+
+/* HEADER */
+
+header {
+    display: flex;
+    position: fixed;
+    padding: 30px 0;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    background-image: url(media/brand/headerBack.svg);
+    background-position: top;
+    background-size: cover;
+    z-index: 9999;
+    transition: 1s;
+}
+
+header.onScroll {
+    background-position: bottom;
+    padding: 15px 0;
+    box-shadow: 0 5px 20px 0 #FFFFFF;
+}
+
+header div.headerBehind {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+header div.headerBehind.headerBehindOpen {
+    height: 100vh;
+    pointer-events: all;
+}
+
+header img.lionsIcon {
+    width: 60px;
+    margin-left: 30px;
+    filter: brightness(3) saturate(0);
+}
+
+header img.headerIcon {
+    display: block;
+    width: 100px;
+    margin: 0 15px;
+    z-index: 9999;
+    filter: brightness(3) saturate(0);
+    transition: .3s;
+}
+
+header.onScroll img.headerIcon, header.onScroll img.lionsIcon {
+    filter: none;
+}
+
+header div.projectHeaderDropdownList {
+    display: none;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin-right: 50px;
+}
+
+header div.projectHeaderDropdownList a {
+    transition: .5s cubic-bezier(.73, -0.29, .02, 1);
+}
+
+header div.projectHeaderDropdownList span, header div.projectHeaderDropdownList a {
+    margin: 0;
+    cursor: pointer;
+}
+
+header div.projectHeaderDropdownList span {
+    position: relative;
+    z-index: 9999;
+    letter-spacing: 2px;
+    transition: .6s;
+}
+
+header.onScroll div.projectHeaderDropdownList span {
+    color: #ea781e;
+}
+
+header .hamburger {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    margin: 0 30px;
+}
+
+.hamburger rect {
+    transition: fill 0.5s;
+}
+
+header.onScroll .hamburger rect {
+    fill: #ea781e;
+}
+
+header .socialBox {
+    display: none;
+}
+
+.projectHeaderDropdownListMobile {
+    position: absolute;
+    width: 300px;
+    top: 100px;
+    right: 30px;
+
+    text-align: right;
+}
+.projectHeaderDropdownListMobile a {
+    display: none;
+    margin: 20px 0;
+
+    opacity: 0;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-family: var(--fonta);
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.projectHeaderDropdownListMobile a:first-of-type {
+    margin-top: 50px;
+}
+
+.projectHeaderDropdownListMobile a:hover {
+    transform: translateY(-5px);
+}
+
+.projectHeaderDropdownListMobile div {
+    width: 100%;
+}
+
+.projectHeaderDropdownListMobile div img {
+    width: 40px;
+    margin-left: 20px;
+}
+
+header div.projectHeaderDropdownList a {
+    position: relative;
+    display: inline-block;
+    color: #FFFFFF;
+    font-family: var(--fonta);
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+    margin-top: 0;
+    pointer-events: none;
+}
+
+header.onScroll div.projectHeaderDropdownList a {
+    color: #ea781e;
+}
+
+header span.projectHeaderDropdown span.projectDropdownArrow {
+    display: inline-block;
+    transform: translateY(-3px) rotate(-45deg);
+    font-weight: 900;
+    transition: 1s cubic-bezier(.29, 1.47, .47, 1);
+}
+
+header span.projectHeaderDropdown:hover span.projectDropdownArrow {
+    transform: translateY(-2px) rotate(-75deg);
+}
+
+header span.projectHeaderDropdown span.projectDropdownArrow.projectHeaderArrowOpen {
+    transform: translateY(0px) rotate(-585deg);
+}
+
+header div.projectHeaderDropdownList a::before, header .socialBox a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    opacity: 0;
+    transition: .25s ease;
+}
+
+header.onScroll div.projectHeaderDropdownList a::before {
+    background: radial-gradient(circle at top right,#FFCC4E,#F15D3F);
+}
+
+header div.projectHeaderDropdownList a:hover::before {
+    opacity: 1;
+    width: 100%;
+}
+
+header div.projectHeaderDropdownList.projectHeaderDropdownListOpen a {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 50px;
+    margin-top: 20px;
+    pointer-events: all;
+    transition: .5s cubic-bezier(.61, .16, .16, 1.29);
+}
+
+header div.projectHeaderDropdownList.projectHeaderDropdownListOpen a:nth-of-type(3) {
+    transition: .85s cubic-bezier(.61, .16, .16, 1.29);
+}
+
+header div.projectHeaderDropdownList.projectHeaderDropdownListOpen a:nth-of-type(4) {
+    transition: 1.25s cubic-bezier(.61, .16, .16, 1.29);
+}
+
+.projectHeaderDropdownList div {
+    display: flex;
+    width: 125px;
+    height: 60px;
+    max-height: 0;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    opacity: 0;
+
+    transition: 0.5s;
+}
+
+.projectHeaderDropdownListOpen div {
+    max-height: 60px;
+    margin-top: 10px;
+
+    opacity: 1;
+}
+
+header.onScroll .projectHeaderDropdownList div {
+    justify-content: center !important;
+
+    background: radial-gradient(circle at top right,#FFCC4E,#F15D3F);
+    border-radius: 10px;
+
+    transition: 0.5s;
+}
+
+header.onScroll .projectHeaderDropdownListOpen div {
+    margin-top: 20px;
+}
+
+.projectHeaderDropdownList div a {
+    margin-top: 0 !important;
+    width: 30px !important;
+}
+
+.projectHeaderDropdownList div img {
+    width: 30px;
+}
+
+.projectHeaderDropdownList div span {
+    display: inline-block;
+    width: 10px;
+}
+
+header.onScroll .projectHeaderDropdownList div span {
+    width: 25px;
+}
+
+/* | MAIN */
+
+main.cause {
+    padding: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0,0,0);
+    transform: translateZ(0);
+    transition: .2s ease;
+}
+
+main.causeDropdownOpen {
+    filter: blur(8px);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* || introBanner */
+
+main.cause div.introBanner {
+    min-height: Calc(100vh - 150px);
+    padding-top: 150px;
+    padding-left: 0;
+    padding-right: 0;
+    background: radial-gradient(circle at top right,#FFCC4E,#F15D3F);
+}
+
+/* U.P. Lions Serve logo */
+main.cause div.introBanner img {
+    display: block;
+    width: 70%;
+    margin: 20px auto;
+}
+
+/* Subtitle text */
+main.cause div.introBanner p {
+    margin: 20px 30px 15vh;
+}
+
+/* MOBILE ONLY project scroll text, arrows */
+main.cause div.introBanner div.logoPreviewMobileTip {
+    opacity: 0.75;
+}
+main.cause div.introBanner div.logoPreviewMobileTip p {
+    width: 99%;
+    margin: 50px auto -40px auto;
+    text-align: center;
+}
+main.cause div.introBanner div.logoPreviewMobileTip p span.logoPreviewArrowTip {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 0;
+    transform: rotate(45deg);
+}
+main.cause div.introBanner div.logoPreviewMobileTip p span.logoPreviewArrowTip:last-of-type {
+    transform: translateY(2px)rotate(225deg);
+}
+
+/* Quick links */
+main.cause div.introBanner .logoPreview {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+main.cause div.introBanner .logoPreview a {
+    display: block;
+    margin: 50px 50px;
+    scroll-snap-align: center;
+}
+main.cause div.introBanner .logoPreview a:first-of-type {
+    margin-left: 50%;
+}
+main.cause div.introBanner .logoPreview a:last-of-type {
+    margin-right: 50%;
+}
+main.cause div.introBanner .logoPreview a img {
+    width: 60vw;
+    max-width: 350px;
+    max-height: 250px;
+    margin: 0;
+    padding: 0;
+    transition: .85s cubic-bezier(.61, .16, .07, 1.46);
+}
+main.cause div.introBanner .logoPreview a.hg img {
+    max-height: 100px;
+}
+main.cause div.introBanner .logoPreview img:hover {
+    transform: scale(1.1);
+    transition: .35s cubic-bezier(.61, .16, .07, 1.46);
+}
+
+/* || programBanner */
+
+main.cause div.programBanner {
+    padding: 100px 30px 40px 30px;
+}
+
+main.cause div.programBanner.cc {
+    background: radial-gradient(circle at top center,#fffa87,#ffb100);
+}
+
+main.cause div.programBanner.dad {
+    background: radial-gradient(circle at top center,#c1d7ff,#0055b7);
+}
+
+main.cause div.programBanner.hg {
+    background: radial-gradient(circle at top center,#D6CE2E,#39B54A);
+}
+
+main.cause div.programBanner .logoImgLink img {
+    height: 100px;
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+main.cause div.programBanner.hg img.programLogo {
+    height: 30px;
+}
+
+main.cause div.programBanner h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+main.cause div.programBanner p, main.cause div.introBanner p {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.5em;
+    max-width: 400px;
+}
+
+main.cause div.programBanner .lm, main.cause footer.programBanner .lm {
+    position: relative;
+    display: block;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 900;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: linear-gradient(10deg,rgba(255,255,255,0.3),rgba(255,255,255,0));
+}
+
+main.cause div.programBanner .lm::before, main.cause footer.programBanner .lm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #FFFFFF;
+    transform: translate(-6px,3px);
+    cursor: pointer;
+    transition: .85s cubic-bezier(.61, .16, .07, 1.46);
+}
+
+main.cause div.programBanner .lm::after, main.cause footer.programBanner .lm::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #FFFFFF;
+    transform: translate(6px,-3px);
+    cursor: pointer;
+    transition: .85s cubic-bezier(.61, .16, .07, 1.46);
+}
+
+main.cause div.programBanner .lm:hover::before, main.cause footer.programBanner .lm:hover::before {
+    transform: translate(0,0);
+}
+
+main.cause div.programBanner .lm:hover::after, main.cause footer.programBanner .lm:hover::after {
+    transform: translate(0,0);
+}
+
+main.cause section div.programBanner.infoPage p span {
+    display: inline-block;
+    border: 2px solid #FFFFFF;
+    padding: 5px 15px;
+}
+
+/* BANNERS */
+
+main.cause footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 80px 30px 80px 30px;
+    background: radial-gradient(circle at top right,#FFCC4E,#F15D3F);
+}
+
+.lionsLocator {
+    display: block;
+    margin-bottom: 80px;
+}
+
+.lionsLocator iframe {
+    width: 80vw;
+    max-width: 350px;
+
+    filter: drop-shadow(0px 15px 15px #ffffff);
+    border-radius: 10px;
+}
+
+main.cause footer .globalcauses {
+    display: block;
+    max-width: 350px;
+    margin: 0;
+    margin-bottom: 150px;
+}
+
+main.cause footer .globalcauses p, .globalcauses span, .globalcauses a {
+    color: #ea781e;
+}
+
+main.cause footer .globalcauses p {
+    padding: 30px 20px 0px;
+    width: auto;
+    text-align: left;
+}
+
+main.cause footer .globalcauses img {
+    display: block;
+    width: 75%;
+    margin: 30px auto;
+    transition: none;
+}
+
+.roundedbox {
+    position: relative;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 15px;
+    padding-bottom: 50px;
+}
+
+.shadow2 {
+    box-shadow: 0px 10px 15px;
+    border-radius: 25px;
+    margin: auto;
+}
+
+#causes {
+    padding-left: 15px;
+    transform: scale(1);
+}
+
+#causesplanet {
+    position: absolute;
+    width: 60%;
+    max-width: 200px;
+    right:0;
+    top: 100%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+}
+
+main.cause footer img {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+main.cause footer div.programBanner {
+    padding-top: 50px;
+}
+
+main.cause footer div.footerButtons a {
+    margin: 20px;
+}
+
+/* FOOTER */
+
+@media only screen and (min-width: 550px) {
+    main.cause div.introBanner p {
+        margin: 50px auto 10vh;
+        font-size: 1.25em;
+    }
+
+    main.cause div.introBanner div.logoPreviewMobileTip {
+        margin: -30px 0 20px;
+    }
+
+    main.cause div.introBanner div.logoPreview a img {
+        width: 40vw;
+        max-height: 180px;
+    }
+
+    main.cause div.programBanner p {
+        margin: 50px auto;
+        font-size: 1.15em;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    header {
+        padding-top: 70px;
+
+        justify-content: flex-start;
+    }
+    header img.lionsIcon {
+        margin-left: 70px;
+    }
+
+    header img.headerIcon {
+        margin: 0 70px 0 15px;
+    }
+
+    header div.projectHeaderDropdownList {
+        display: flex;
+    }
+
+    header .hamburger {
+        display: none;
+    }
+
+    .projectHeaderDropdownListMobile {
+        display: none;
+    }
+
+    header .socialBox {
+        position: absolute;
+        right: 50px;
+
+        display: flex;
+        width: 100px;
+        height: 40px;
+
+        justify-content: center;
+        align-items: center;
+
+        transition: 0.5s;
+    }
+
+    header .socialBox img {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    header .socialBox a {
+        transition: 0.1s;
+    }
+
+    header .socialBox a:hover {
+        transform: translateY(-3px);
+    }
+
+    header.onScroll .socialBox {
+        background: radial-gradient(circle at top right,#FFCC4E,#F15D3F);
+        border-radius: 10px;
+
+        transition: 0.5s;
+    }
+
+    header.onScroll .socialBox {
+        margin-top: 5px;
+    }
+
+    .socialBox a {
+        width: 30px !important;
+        margin: 3px 7px 0;
+    }
+
+    /* HEADER */
+
+    main.cause div.introBanner p {
+        max-width: 500px;
+        font-size: 1.2em;
+    }
+
+    .lionsLocator {
+        margin-bottom: 50px;
+    }
+
+    .lionsLocator iframe {
+        max-width: 580px;
+    }
+
+    main.cause footer img {
+        margin: 0;
+    }
+
+    main.cause footer section:first-of-type {
+        margin-right: 25px;
+    }
+
+    main.cause footer section:last-of-type {
+        margin-left: 25px;
+    }
+
+    main.cause footer div.programBanner {
+        padding: 25px 0;
+        justify-content: flex-start;
+    }
+
+    main.cause footer div.programBanner .lm {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    main.cause div.introBanner {
+        padding-top: 20vh;
+        max-height: Calc(100vh - 140px);
+    }
+
+    main.cause div.introBanner p {
+        max-width: 700px;
+        font-size: 1.25em;
+        margin-bottom: 0;
+    }
+
+    main.cause div.introBanner img {
+        max-width: 700px;
+    }
+
+    main.cause div.introBanner div.logoPreviewMobileTip {
+        display: none;
+    }
+
+    main.cause div.introBanner div.logoPreview {
+        width: 75%;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 10vh 0 24vh;
+
+        justify-content: space-between;
+        overflow: visible;
+    }
+
+    main.cause div.introBanner div.logoPreview a {
+        margin: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100%;
+    }
+
+    main.cause div.introBanner div.logoPreview a img {
+        width: 60%;
+        max-height: 150px;
+        margin: auto;
+    }
+
+    main.cause div.programBanner {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px;
+        transition: 1s ease;
+    }
+
+    main.cause div.programBanner.infoPage {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main.cause div.programBanner.infoPage h1 {
+        margin-top: 200px;
+    }
+
+    main.cause div.programBanner div.content {
+        width: 50%;
+    }
+
+    main.cause div.programBanner:hover {
+        filter: brightness(1.1);
+    }
+
+    main.cause div.programBanner.cc:hover {
+        filter: brightness(1);
+    }
+
+    main.cause div.programBanner.cc {
+        background: radial-gradient(circle at top right,#fffa87,#ffb100);
+    }
+
+    main.cause div.programBanner.dad {
+        background: radial-gradient(circle at top right,#c1d7ff,#0055b7);
+    }
+
+    main.cause div.programBanner.hg {
+        background: radial-gradient(circle at top right,#D6CE2E,#39B54A);
+    }
+
+    main.cause div.programBanner:hover img.programLogo {
+        transform: scale(1.05);
+    }
+
+    main.cause div.programBanner .logoImgLink img {
+        margin: 0;
+        margin-right: 10%;
+        height: auto;
+        max-height: 550px;
+        width: 20vw;
+        transition: 1s cubic-bezier(.29, 1.47, .47, 1);
+    }
+
+    main.cause div.programBanner.dad img.programLogo {
+        width: 20vw;
+    }
+
+    main.cause div.programBanner.hg img.programLogo {
+        width: 30vw;
+        height: auto;
+        margin-top: 100px;
+    }
+
+    main.cause div.introBanner .logoPreview a.hg img {
+        max-height: 85px;
+    }
+
+    main.cause div.programBanner h1 {
+        margin: 30px 10%;
+        text-align: left;
+        font-size: 3em;
+        white-space: nowrap;
+    }
+
+    main.cause div.programBanner p {
+        margin: 50px 10%;
+        max-width: 450px;
+    }
+
+    main.cause footer section div.programBanner {
+        display: block;
+    }
+
+    .lionsLocator {
+        margin-bottom: 75px;
+    }
+
+    .lionsLocator iframe {
+        max-width: 1100px;
+    }
+
+    main.cause div.programBanner a, main.cause footer.programBanner a {
+        margin: 30px 10%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    main.cause div.programBanner.hg img.programLogo {
+        width: 35vw;
+        max-width: 550px;
+        margin-top: 0;
+    }
+}
