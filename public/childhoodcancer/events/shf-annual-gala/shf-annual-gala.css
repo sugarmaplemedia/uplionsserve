@@ -1,0 +1,25 @@
+/*
+UP LIONS SERVE CHILDHOOD CANCER SITE
+    PAGE: EVENTS > SHF ANNUAL GALA
+    MODIFIED: 2022-04-03
+*/
+
+/*
+TABLE OF CONTENTS
+    360px
+        SUBMAIN
+*/
+
+
+/* 360px */
+
+@import url("/childhoodcancer/assets/main.css");
+
+/* 360px | BODY */
+
+/* 360px || SUBMAIN */
+
+.submain:first-of-type p {
+    padding: 1em 0 2em;
+    line-height: 1.5em;
+}

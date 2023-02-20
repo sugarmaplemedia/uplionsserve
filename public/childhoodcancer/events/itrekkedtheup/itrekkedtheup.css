@@ -1,0 +1,421 @@
+/*
+UP LIONS SERVE CHILDHOOD CANCER SITE
+    PAGE: INITIATIVES > ITREKKEDTHEUP
+    MODIFIED: 2021-12-15
+*/
+
+/*
+TABLE OF CONTENTS
+    360px
+        | SUBMAIN
+        | TAGLINE
+            || MISSION CONTAINER
+            || SHORTCUT BUTTON
+        | ITTUP TILES
+        | TRACK & TREK
+    375px
+        | TAGLINE
+            || SHORTCUT BUTTON
+    550px
+        | SUBMAIN
+        | ITTUP TILES
+    750px
+        | SUBMAIN
+        | TAGLINE
+            || MISSION CONTAINER
+    900px
+        | SUBMAIN
+        | ITTUP TILES
+    1100px
+        | SUBMAIN
+*/
+
+
+/* 360px */
+
+@import url("/childhoodcancer/assets/main.css");
+
+/* 360px | SUBMAIN */
+
+.contain1 .submain:first-of-type {
+    margin: 0;
+    padding: 0 30px;
+    background: url("/childhoodcancer/media/brand/introBack.png");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 150% top;
+}
+
+/* 360px | TAGLINE */
+
+.tagline {
+    margin: 25px 0 100px 0;
+    text-shadow: 0 0 5px white;
+}
+
+.tagline h1 {
+    margin: 35px 0 0 0;
+}
+
+.tagline h2 {
+    padding: 15px 0 15px 5px;
+    border-left: 5px solid var(--a);
+}
+
+.tagline h2:nth-of-type(even) {
+    border-left: 5px solid var(--b);
+}
+
+.tagline h2:nth-of-type(1) {
+    border-top-left-radius: 5px;
+}
+
+.tagline h2:nth-of-type(2) {
+    border-left: 20px solid var(--b);
+}
+
+.tagline h2:nth-of-type(3) {
+    border-left: 40px solid var(--a);
+}
+
+.tagline h2:nth-of-type(4) {
+    border-left: 60px solid var(--b);
+    border-bottom-left-radius: 60px;
+}
+
+.tagline h1 {
+    text-align: center;
+}
+
+/* 360px || MISSION CONTAINER */
+
+.mission {
+    padding: 30px;
+    background: var(--white90);
+    border-radius: 30px;
+    box-shadow: 0 20px 30px -5px var(--b);
+    line-height: 1.35em;
+}
+
+.mission br {
+    margin-bottom: 3px;
+}
+
+.mission ul {
+    list-style: outside;
+    padding-left: 30px;
+}
+
+.mission li {
+    display: list-item;
+
+}
+
+li a:hover {
+    color: var(--a);
+
+    transition: 0.1s;
+}
+
+.mission p:last-child {
+    margin: 20px 0 0 0;
+}
+
+@keyframes hop1 {
+    45% {transform: translateY(0);}
+    50% {transform: translateY(-5px);}
+    55% {transform: translateY(0);}
+    60% {transform: translateY(-5px);}
+    65% {transform: translateY(0);}
+}
+
+
+/* 360px || SHORTCUT BUTTON */
+
+.shortcutButtonContain {
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -khtml-border-radius: 30px;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.shortcutButton {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    background: var(--a);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    margin: 50px auto;
+    width: 80%;
+    height: 80px;
+    line-height: 80px;
+    overflow: hidden;
+    transition: .25s cubic-bezier(.25, 1.75, .41, 1.01);
+    cursor: pointer;
+}
+
+.shortcutButton:hover {
+    transform: rotate(5deg) scale(1.05);
+    transition: .5s cubic-bezier(.25, 1.75, .41, 1.01);
+}
+
+.shortcutButton img {
+    position: absolute;
+    bottom: -5px;
+    right: 20px;
+    height: 60px;
+    animation: hop1 4s ease infinite;
+}
+
+
+/* 360px | ITTUP TILES */
+
+.ittupIdeas {
+    margin: 0;
+    overflow: hidden;
+}
+
+.exampleTile:nth-of-type(odd) {
+    margin: 200px 50px 0 0;
+    text-align: right;
+}
+
+.exampleTile:nth-of-type(even) {
+    margin: 100px 0 0 30px;
+    text-align: left;
+}
+
+.exampleTile img {
+    width: 100%;
+    border: 20px solid var(--a);
+    border-radius: 0 50px 50px 0;
+    pointer-events: none;
+}
+
+.exampleTile:nth-of-type(odd) img {
+    border-left: 0;
+}
+
+.exampleTile:nth-of-type(even) img {
+    border-radius: 50px 0 0 50px;
+    border-right: 0;
+}
+
+.exampleTile h2 {
+    margin: 30px 30px 0 0;
+    border-bottom: 5px solid var(--b);
+    border-bottom-right-radius: 5px;
+}
+
+.exampleTile:nth-of-type(even) h2 {
+    margin: 30px 0 0 30px;
+    border-radius: 0 0 0 5px;
+}
+
+.exampleTile:nth-of-type(even) p {
+    margin: 10px 0 0 30px;
+    padding: 30px 80px 30px 30px;
+    border-radius: 5px 0 0 5px;
+}
+
+.exampleTile p {
+    margin: 10px 30px 0 0;
+    background: var(--c);
+    padding: 30px 30px 30px 80px;
+    border-radius: 0 5px 5px 0;
+    border-top: 5px solid var(--a);
+}
+
+.exHeading {
+    margin: 50px 30px 10px 30px;
+    text-shadow: 0 0 5px white;
+}
+
+.exText {
+    margin: 0 30px 10px 30px;
+}
+
+.exForm {
+    background: var(--b);
+    padding: 10px;
+    border-radius: 1000px;
+    margin: 0 30px 10px 30px;
+}
+
+
+/* 360px | TRACK & TREK */
+
+.sheet .shortcutImg {
+    animation: none;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 10%;
+}
+
+
+/* 375px */
+
+@media only screen and (min-width: 375px) {
+
+    /* 375px | TAGLINE */
+
+    /* 375px || SHORTCUT BUTTON */
+
+    .shortcutButton {
+        width: 250px;
+    }
+
+}
+
+
+/* 550px */
+
+@media only screen and (min-width: 550px) {
+
+    /* 550px | SUBMAIN */
+
+    .contain1 .submain:first-of-type {
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 100px;
+
+        background-size: 50%;
+        background-position: 100% top;
+    }
+
+
+    /* 550px | ITTUP TILES */
+
+    .exampleTile:nth-of-type(odd) {
+        margin: 200px 100px 0 0;
+    }
+
+    .exampleTile:nth-of-type(even) {
+        margin: 200px 0 0 100px;
+    }
+
+    .exampleTile img {
+        width: 50%;
+        border-radius: 50px 50px 25px 0;
+        border: 0;
+    }
+
+    .exampleTile:nth-of-type(even) img {
+        border-radius: 50px 50px 0 25px;
+    }
+
+    .exampleTile h2 {
+        margin-top: -8px;
+        border-top: 5px solid var(--b);
+        border-radius: 0 5px 5px 0;
+        padding-top: 5px;
+    }
+
+    .exampleTile:nth-of-type(even) h2 {
+        border-radius: 5px 0 0 5px;
+        margin-top: -8px;
+    }
+
+    .exampleTile:nth-of-type(odd) p {
+        padding-left: 25%;
+    }
+
+    .exampleTile:nth-of-type(even) p {
+        padding-right: 25%;
+    }
+
+    .exHeading {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .exText {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+}
+
+
+/* 750px */
+
+@media only screen and (min-width: 750px) {
+
+    /* 750px | SUBMAIN */
+
+    .contain1 .submain:first-of-type {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+
+        background-size: 50%;
+        background-position: 100% top;
+    }
+
+
+    /* 750px | TAGLINE */
+
+    .tagline {
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    /* 750px || MISSION CONTAINER */
+
+    .mission {
+        width: 600px;
+        margin: auto;
+    }
+
+    .mission ul {
+        list-style: outside;
+        padding-left: 50px;
+    }
+
+}
+
+
+/* 900px */
+
+@media only screen and (min-width: 900px) {
+
+    /* 900px | SUBMAIN */
+
+    .contain1 .submain:first-of-type {
+        background-size: 500px;
+        background-position: 90% top;
+    }
+
+
+    /* 900px | ITTUP TILES */
+
+    .exampleTile:nth-of-type(odd) {
+        margin-right: 50%;
+    }
+
+    .exampleTile:nth-of-type(even) {
+        margin-left: 50%;
+    }
+
+}
+
+
+/* 1100px */
+
+@media only screen and (min-width: 1100px) {
+
+    /* 1100px | SUBMAIN */
+
+    .contain1 .submain:first-of-type {
+        width: 85%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

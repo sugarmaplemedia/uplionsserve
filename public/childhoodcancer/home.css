@@ -1,0 +1,1332 @@
+/*
+UP LIONS SERVE CHILDHOOD CANCER SITE
+    PAGE: HOME
+    MODIFIED: 2021-12-15
+*/
+
+/*
+TABLE OF CONTENTS
+    360px
+        | MISSION
+            || LANDING ANIMATION
+            || HEADLINE
+            || SHORTCUT BUTTON
+            || MISSION CONTAINER
+        | HEROES
+
+*/
+
+
+/* 360px */
+
+@import url("/childhoodcancer/assets/main.css");
+
+/* 360px | MISSION */
+
+#mission {
+    margin-bottom: 150px;
+}
+
+/* 360px || LANDING ANIMATION */
+
+.landingAnim {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingAnim .container {
+    position: relative;
+}
+
+.landingAnim .fg {
+    position: relative;
+}
+
+.landingAnim .fg img {
+    position: absolute;
+    width: 260px;
+    top: 48px;
+    left: -17px;
+
+    transition: 0.2s;
+}
+
+.landingAnim .fg:hover {
+    cursor: help;
+}
+
+.landingAnim .fg:hover img {
+    transform: rotate(9.5deg) scale(1.3);
+}
+
+.landingAnim .fg div {
+    display: block;
+    width: 225px;
+    height: 225px;
+    margin: auto;
+
+    background-color: white;
+    border-radius: 100%;
+}
+
+.landingAnim img.bg {
+    visibility: visible;
+    position: absolute;
+    width: 290px;
+    left: -31px;
+}
+
+.landingAnim div.bg {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: -8px;
+    top: -8px;
+
+    border: 5px dashed var(--b);
+    border-radius: 100%;
+}
+
+.landingAnim p {
+    position: absolute;
+    width: 200px;
+    max-width: 350px;
+    right: -85px;
+    bottom: 0px;
+
+    filter: opacity(0) blur(20px) drop-shadow(0 0 5px white);
+    user-select: none;
+
+    transition: 3s ease-in;
+}
+
+.landingAnim .fg:hover p {
+    filter: opacity(1) blur(0.75px) drop-shadow(0 0 5px white);
+    transition: 1s;
+}
+
+/* 360px || HEADLINE */
+
+#mission h2 {
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+
+/* 360px || SHORTCUT BUTTON */
+
+.shortcutButtonContain {
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -khtml-border-radius: 30px;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.shortcutButton {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    background: var(--a);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    margin: 50px auto;
+    width: 80%;
+    height: 80px;
+    line-height: 80px;
+    overflow: hidden;
+    transition: .25s cubic-bezier(.25, 1.75, .41, 1.01);
+    cursor: pointer;
+}
+
+.shortcutButton:hover {
+    transform: rotate(5deg) scale(1.05);
+    transition: .5s cubic-bezier(.25, 1.75, .41, 1.01);
+}
+
+.shortcutButton img {
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    height: 75px;
+    animation: hop1 4s ease infinite;
+}
+
+@keyframes hop1 {
+    45% {transform: translateY(0);}
+    50% {transform: translateY(-5px);}
+    55% {transform: translateY(0);}
+    60% {transform: translateY(-5px);}
+    65% {transform: translateY(0);}
+}
+
+
+/* 360px | HEROES */
+
+#heroes {
+    margin-bottom: 150px;
+}
+
+.herosHeading {
+    line-height: 16vh;
+    height: 20vh;
+    width: 100%;
+    text-align: right;
+    background: url(/childhoodcancer/media/brand/arrow.1.svg);
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 5px white;
+}
+
+.heroDisplay {
+    position: relative;
+    margin: 50px 0;
+    padding: 30px;
+    background: var(--white90);
+    box-shadow: 0 30px 30px var(--b);
+    border-radius: 30px;
+    padding-bottom: 75px;
+    overflow: hidden;
+}
+
+.heroDisplay .container {
+    position: relative;
+    z-index: 9999;
+}
+
+.heroImgContain {
+    position: relative;
+    width: 100%;
+    height: 85vw;
+    overflow: hidden;
+}
+
+.heroImg {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    z-index: 99;
+    transform: translateX(-50%) rotateY(90deg);
+    transition: .25s cubic-bezier(.63, -0.25, .41, 1.01);
+    pointer-events: none;
+    border-radius: 20px;
+}
+
+.activeHeroImg {
+    transform: translateX(-50%) rotateY(0deg);
+    transition: 1.5s .25s cubic-bezier(.25, 1.75, .41, 1.01);
+}
+
+.heroBack {
+    display: none;
+    position: absolute;
+    width: 90%;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.heroImgBorder {
+    display: none;
+}
+
+.heroName {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 10px solid var(--a);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#heroText2 {
+    margin-top: 20px;
+}
+
+#heroNext {
+    right: 0;
+}
+
+#heroPrev {
+    left: 0;
+}
+
+/* || HERO DISPLAY */
+
+.heroDisplay .controls {
+    top: 38vw;
+    width: 95%;
+    transform: translate(-50%,50%);
+    z-index: 999;
+}
+
+.heroDisplay .controls .arrow {
+    width: 30px;
+}
+
+.heroDisplay .controls .conShadow {
+    transform: translateX(10px);
+}
+
+.heroDisplay .controls .arrow:active .conButton {
+    transform: translateX(10px) rotate(180deg);
+}
+
+.heroDisplay .controls .arrow:active .arrowGraphic {
+    transform: translate(-50%,-50%);
+}
+
+.toTop {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50px;
+    transform: translate(-50%,85px);
+    transition: .25s cubic-bezier(.25, 1.75, .41, 1.01);
+}
+
+.toTop img {
+    width: 100%;
+}
+
+.toTop:active {
+    transform: translate(-50%,80px);
+}
+
+
+/* || DATA DISPLAY */
+
+h2.subheading {
+    margin-bottom: -30px;
+
+    color: var(--a);
+    font-family: var(--fonta);
+    font-size: 2.5em;
+}
+
+#data {
+    margin-right: 0;
+    margin-bottom: 100px;
+}
+
+#data h2 {
+    text-align: left;
+}
+
+.dataDisplay {
+    position: relative;
+    margin: 50px 0;
+    padding: 30px 0 50px 30px;
+    background: var(--white90);
+    box-shadow: 0 30px 30px var(--b);
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.dataContain {
+    right: 0;
+    width: 100%;
+    height: 50vw;
+}
+
+.dataContain img {
+    pointer-events: none;
+}
+
+.dataImg {
+    position: absolute;
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    transform: rotateY(90deg);
+    transition: .25s cubic-bezier(.63, -0.25, .41, 1.01);
+}
+
+.dataImg:nth-of-type(2) {
+    right: 0;
+}
+
+.dataActive {
+    transform: rotateY(0deg);
+    transition: 1.5s .25s cubic-bezier(.25, 1.75, .41, 1.01);
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 150px;
+    height: 50px;
+    transform: translate(-60%,50%);
+}
+
+.arrow {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.inactive .conShadow {
+    background: rgba(75, 100, 150, .5);
+    transition: .25s ease;
+}
+
+.inactive .conButton {
+    background: rgb(255, 227, 166);
+    opacity: 0.75;
+    transition: .25s ease;
+}
+
+.arrow:last-of-type {
+    transform: rotate(180deg);
+}
+
+#dataPrev {
+    left: 0;
+}
+
+#dataNext {
+    right: 0;
+}
+
+.conButton {
+    background: var(--c);
+    transition: .5s cubic-bezier(.19, 1.5, .24, 1);
+}
+
+.conShadow {
+    background: var(--a);
+    transform: translateX(20px);
+}
+
+.arrowGraphic {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    transition: .5s cubic-bezier(.19, 1.5, .24, 1);
+}
+
+.arrow:hover .conButton {
+    transform: translateX(5px);
+    transition: .5s cubic-bezier(0, 2, 0, .87);
+}
+
+.arrow:hover .arrowGraphic {
+    transform: translate(-30%,-50%);
+    transition: .5s cubic-bezier(0, 2, 0, .87);
+}
+
+.arrow:active .conButton {
+    transform: translateX(20px);
+    transition: .20s cubic-bezier(0, .88, .01, .93);
+}
+
+.arrow:active .arrowGraphic {
+    transform: translate(-50%,-50%);
+    transition: .20s cubic-bezier(0, .73, 0, 1);
+}
+
+
+/* || DATA EXPLAIN */
+
+.dataExplain {
+    position: relative;
+    margin: 80px 30px 50px 20px;
+    line-height: 1.5em;
+}
+
+.dataExplain p {
+    margin-left: 20px;
+}
+
+#dataText2 {
+    margin-top: 10px;
+}
+
+.dataExplain img {
+    position: absolute;
+    width: 30vw;
+    top: 0;
+    left: 0;
+    transform: translate(-25px,-35px);
+    pointer-events: none;
+}
+
+.creds {
+    border-top: 5px solid var(--a);
+    border-left: 5px solid var(--a);
+    border-radius: 5px;
+    border-top-left-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.75em;
+    line-height: 1em;
+    transition: .5s cubic-bezier(.19, 1.5, .24, 1);
+}
+
+.creds:hover {
+    background: var(--c);
+    border-top-left-radius: 5px;
+    transition: .20s cubic-bezier(0, .73, 0, 1);
+}
+
+
+/* || HOW WE HELP MENU */
+
+h2.helpHeading {
+    margin: 50px 0 20px;
+    padding: 30px 0;
+    text-shadow: 0 0 5px white;
+    background: url(/childhoodcancer/media/brand/arrow.1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 80%;
+}
+
+.howWeHelpMenu {
+     padding: 30px 0 70px 0;
+}
+
+/* ||| BUTTONS */
+
+#menuPressCenterBtn, #menuMediaBtn, #menuPartnersBtn, #menuFundraisingBtn, #menuPhotoBtn {
+     display: none;
+}
+
+.howWeHelpMenuTextBtn {
+     width: 65%;
+     border-top-right-radius: 35px !important;
+     border-bottom-right-radius: 35px !important;
+     border-top-left-radius: 50px !important;
+     border-bottom-left-radius: 50px !important;
+}
+
+#mobileExpandBtn {
+     width: 33%;
+     border-top-right-radius: 50px;
+     border-bottom-right-radius: 50px;
+     border-top-left-radius: 35px !important;
+     border-bottom-left-radius: 35px !important;
+}
+
+.howWeHelpMenu .button {
+     display: inline-block;
+     padding: 8px 0;
+     background-color: white;
+     border-radius: 15px;
+     cursor: pointer;
+
+     transform: translateY(-8px);
+     transition: .5s cubic-bezier(.19, 1.5, .24, 1);
+}
+
+.howWeHelpMenu .activeButton {
+    box-shadow: 0 4px 0 var(--b), 0px 2px 5px rgba(75, 100, 150, .7);
+    transform: translateY(1px);
+    transition: .5s cubic-bezier(0, .88, .01, .93);
+}
+
+.howWeHelpMenu .inactiveButton {
+     box-shadow: 0px 12px 0px var(--b), 0px 10px 15px rgba(75, 100, 150, .7);
+}
+
+
+/* ||| MOBILE DROP DOWN */
+
+#mobileDropDown {
+     margin: 17px 0 25px 0;
+     padding: 10px 0;
+     background-color: white;
+     border-radius: 20px;
+     box-shadow: 0px 12px 0px var(--b), 0px 10px 15px rgba(75, 100, 150, .7);
+}
+
+#dropDownArrow {
+     width: auto;
+     margin-left: -15px;
+}
+
+#presscenter {
+     color: var(--a);
+}
+
+.arrowAnimateIn {
+     transform: rotate(90deg);
+     transition: 0.3s ease-out;
+}
+
+.arrowAnimateOut {
+     transform: rotate(0deg);
+     transition: 0.3s ease-out;
+}
+
+.dropDownLines {
+     border: 1px solid var(--b);
+     border-radius: 100px;
+     background-color: var(--b);
+     height: 2px;
+     width: 90%;
+}
+
+.dropDownText {
+     cursor: pointer;
+}
+
+
+/* ||| TEXT */
+
+#mobileExpandText {
+     width: 75%;
+}
+
+.buttonText {
+     font-family: var(--fontc);
+     font-weight: 900;
+     line-height: inherit;
+     font-size: 1em;
+     color: var(--b);
+
+     display: inline-block;
+     text-align: center;
+     padding: 5px 0;
+     width: 100%;
+}
+
+.activeText {
+     color: var(--a);
+}
+
+
+/* ||| VIEWPORT */
+
+.displayContentContainer {
+     display: block;
+     width: 88%;
+     margin: auto;
+}
+
+.displayContentContainer a {
+     color: var(--b);
+     transition: 0.1s ease-out;
+}
+
+.displayContentContainer a:hover {
+     color: var(--a);
+     transition: 0.1s ease-out;
+}
+
+.howWeHelpMenuDisplay {
+     display: block;
+     width: 100%;
+     height: 500px;
+     margin-top: 15px;
+     background-color: white;
+     border-radius: 15px;
+     box-shadow: 0px 12px 0px var(--b), 0px 12px 15px rgba(75, 100, 150, .7);
+     text-align: center;
+     overflow-y: scroll;
+}
+
+.hmHeader {
+     font-family: var(--fonta);
+     font-weight: 900;
+     line-height: inherit;
+     font-size: 1.2em;
+     color: var(--b);
+     text-align: left;
+     padding-top: 20px;
+}
+
+.hmHeaderLinked {
+     transition: color 0.1s ease-out;
+}
+
+.helpMenuArticle:hover .hmHeaderLinked{
+     color: var(--a);
+     transition: color 0.1s ease-out;
+}
+
+.hmSubtitle {
+     font-family: var(--fontc);
+     font-weight: 500;
+     line-height: inherit;
+     font-size: 1em;
+     color: var(--b);
+
+     padding-top: 5px;
+     text-align: left;
+}
+
+.hmImgMain {
+     display: inline-block;
+     margin: 15px 3px;
+     border-radius: 20px;
+     box-shadow: 0px 5px 9px rgba(75, 100, 150, .7);
+}
+
+.hmImgLogo {
+     display: block;
+     width: 65%;
+     margin: auto;
+}
+
+#photoGalleryContainer {
+    display: flex;
+    flex-wrap: row wrap;
+    padding-top: 20px;
+}
+
+.pgPhotos, .pgPhotos1, .pgPhotos2, .pgPhotos3 {
+    display: none;
+}
+
+.hmImgGallery {
+     width: 90%;
+     padding: 3px;
+     border-radius: 10px;
+}
+
+.hmLogoBox {
+     display: inline-block;
+     width: 20%;
+     margin-bottom: -1px;
+     padding-top: 20px;
+}
+
+.hmHeaderBox {
+     display: inline-block;
+     width: 75%;
+}
+
+.hmHeaderBox:hover p {
+     color: var(--a);
+     transition: color 0.1s ease-out;
+}
+
+.hmBody {
+     font-family: var(--fontc);
+     font-weight: 500;
+     line-height: inherit;
+     font-size: 1em;
+     color: var(--b);
+     line-height: 1.3em;
+
+     text-align: left;
+}
+
+.hmLineBreak {
+     margin-top: 30px;
+     border: 1px solid var(--b);
+     border-radius: 100px;
+     background-color: var(--b);
+     height: 2px;
+}
+
+
+/* || DONATE FORM */
+
+#donation {
+    width: 100%;
+    margin: 50px 0;
+    margin-bottom: 0;
+    padding: 100px 0;
+
+    background-color: red;
+    background: url('/childhoodcancer/media/brand/landingBack.2a.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+#donationForm {
+    height: auto;
+    margin: auto;
+
+}
+.formNotes .logo {
+    display: block;
+    margin: 100px auto;
+    width: 50%;
+}
+
+.formNote {
+    position: relative;
+    margin: 75px 50px;
+
+    line-height: 1.35em;
+}
+
+.formNote img {
+    position: absolute;
+    width: 30vw;
+    top: 0;
+    left: 0;
+    transform: translate(-20px,-35px);
+}
+
+.formNote .socials {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 50%;
+    margin: 50px auto;
+}
+
+.formNote .socials a:first-of-type {
+    margin-right: 50px;
+}
+
+.formNote .socials img {
+    position: relative;
+    transform: none;
+    width: 50px;
+    padding: 10px;
+    border: 5px solid var(--a);
+    border-radius: 20px;
+    box-shadow: 0 15px 0 0 var(--a);
+    transition: .5s cubic-bezier(.19, 1.5, .24, 1);
+}
+
+.formNote .socials a:hover img {
+    transform: translateY(15px);
+    box-shadow: 0 0px 0 0 var(--c);
+    transition: .20s cubic-bezier(0, .88, .01, .93);
+}
+
+.gifts {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 200px;
+    margin: 50px auto;
+    margin-top: -50px;
+}
+
+.gifts img {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+    pointer-events: none;
+}
+
+.formNote p {
+    margin-left: 20px;
+}
+
+.formNote p a {
+    transition: 1s ease;
+}
+
+.formNote p a:hover {
+    color: var(--c);
+    transition: .15s ease;
+}
+
+
+/* 375px */
+
+@media only screen and (min-width: 375px) {
+
+    /* 375px | MISSION */
+
+    /* 375px || SHORTCUT BUTTON*/
+
+    .shortcutButton {
+        width: 250px;
+    }
+
+    .infoCard a:first-of-type {
+        padding: 20px;
+    }
+
+
+/* 450px */
+
+@media only screen and (min-width: 450px) {
+
+    #donationForm {
+        width: 425px;
+
+        background-color: white;
+        border: 10px solid var(--a);
+        border-radius: 15px;
+    }
+
+}
+
+/* 550px */
+
+@media only screen and (min-width: 550px) {
+
+    /* 550px | MISSION */
+
+    #mission h2 {
+        margin-top: 40px;
+    }
+
+    /* 550px || LANDING ANIMATION */
+
+    .landingAnim {
+        transform: scale(1.1);
+    }
+
+
+    /* 550px | HEROES */
+
+    .heroDisplay .controls {
+        height: 200px;
+    }
+
+    .dataContain {
+        height: 38vw;
+    }
+
+    .dataExplain {
+        margin-right: 25%;
+    }
+
+    .dataExplain img {
+        width: 20vw;
+    }
+
+    #donationForm {
+        width: 425px;
+
+        background-color: white;
+        border: 10px solid var(--a);
+        border-radius: 15px;
+    }
+
+    .formNote {
+        margin: 100px 150px;
+    }
+
+    .formNote img {
+        width: 20vw;
+    }
+
+    .hmHeader {
+         font-size: 1.35em;
+    }
+
+    .hmSubtitle {
+         font: 1.1em;
+    }
+
+}
+
+
+/* 750px */
+
+@media only screen and (min-width: 750px) {
+
+    /* 750px | MISSION */
+
+    /* 750px || LANDING ANIMATION */
+
+    .landingAnim p {
+        position: absolute;
+        width: 350px;
+        right: -235px;
+        bottom: 20px;
+
+        filter: opacity(0) blur(20px) drop-shadow(0 0 5px white);
+        user-select: none;
+
+        transition: 3s ease-in;
+    }
+
+    /* 750px || HEADLINE */
+
+    #mission h2 {
+        width: 350px;
+        margin: 40px auto 0;
+    }
+
+
+    /* 750px | HEROES */
+
+    .controls {
+        bottom: 5vh;
+        left: 25%;
+        height: 100px;
+        z-index: 9999;
+    }
+
+    .herosHeading {
+        letter-spacing: 0.1em;
+    }
+
+    .heroDisplay {
+        position: relative;
+        margin-top: 20vw;
+        overflow: visible;
+        border-radius: 50px;
+    }
+
+    .heroImgContain {
+        position: absolute;
+        top: -110px;
+        left: 70px;
+        width: 230px;
+        height: 300px;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .heroImgBorder {
+        position: absolute;
+        display: block;
+        width: 550px;
+        left: -15px;
+        top: -25px;
+        pointer-events: none;
+        z-index: 999;
+    }
+
+    .heroImgContain img {
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    .heroDisplay .controls {
+        top: 165px;
+        left: -60px;
+        height: 100px;
+        transform: none;
+        z-index: 9999;
+    }
+
+    .heroDisplay .controls .arrow {
+        width: 50px;
+    }
+
+    .heroDisplay .controls #heroNext {
+        top: -238px;
+        left: 585px;
+    }
+
+    .heroDisplay .controls .conShadow {
+        transform: translateX(20px);
+    }
+
+    .heroDisplay .controls .arrow:hover .conButton {
+        transform: translateX(5px);
+    }
+
+    .heroDisplay .controls .arrow:active .conButton {
+        transform: translateX(20px);
+    }
+
+    .heroBack {
+        display: block;
+        left: 50%;
+        top: 0;
+        opacity: .15;
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+        transform: translate(-52%,-30%) rotate(10deg) scale(0.95);
+        width: 90vw;
+        z-index: 0;
+        transition: .25s ease;
+    }
+
+    .activeHeroBack {
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        opacity: .9;
+        transform: translate(-52%,-30%) rotate(10deg) scale(1);
+        transition: 1s .5s ease;
+    }
+
+    .heroDisplay h3 {
+        border-top: none;
+        top: 70px;
+        left: 335px;
+        margin: 0;
+        text-align-last: right;
+        position: absolute;
+    }
+
+    .heroDisplay .container {
+        margin: 200px 50px 0 100px;
+    }
+
+    .heroDisplay .toTop {
+        display: none;
+    }
+
+    .dataContain {
+        height: 42vw;
+    }
+
+    .dataExplain {
+        margin-right: 50%;
+    }
+
+    .dataExplain img {
+        width: 100px;
+    }
+
+    #donation {
+        background-image: url(/childhoodcancer/media/brand/landingBack.2.png);
+        background-position: center;
+        margin-top: -100px;
+        padding-top: 350px;
+    }
+
+    .formNote {
+        margin: 100px auto;
+        width: 400px;
+    }
+
+    .formNote img {
+        width: 100px;
+    }
+
+    #cv-iframe-embed {
+        margin: 0 150px;
+    }
+
+    /* || HOW WE HELP */
+
+    h2.helpHeading {
+        width: 400px;
+        margin: auto;
+        text-align: center;
+    }
+
+    #howWeHelp h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        padding-top: 20px;
+    }
+
+    .infoDisplay {
+        top: 200px;
+    }
+
+    .infoCard {
+        min-height: 100%;
+    }
+
+    .infoCard a:first-of-type {
+        max-width: 300px;
+    }
+
+    .infoCard img {
+        width: 60%;
+    }
+
+    /* HOW WE HELP ^ */
+
+    #mobileExpandBtn, mobileExpandText, #howWeHelpMenuTextBtn, #howWeHelpMenuText {
+         display: none;
+    }
+
+    #menuPressCenterBtn {
+         display: inline-block;
+         width: 23%;
+
+         border-top-right-radius: 35px !important;
+         border-bottom-right-radius: 35px !important;
+         border-top-left-radius: 50px !important;
+         border-bottom-left-radius: 50px !important;
+    }
+
+    #menuMediaBtn {
+        display: inline-block;
+        width: 14%;
+    }
+
+    #menuPartnersBtn {
+        display: inline-block;
+        width: 16%;
+    }
+
+    #menuFundraisingBtn {
+        display: inline-block;
+        width: 20%;
+    }
+
+    #menuPhotoBtn {
+         display: inline-block;
+         border-top-right-radius: 50px;
+         border-bottom-right-radius: 50px;
+         border-bottom-left-radius: 35px;
+         border-top-left-radius: 35px;
+         width: 24%;
+    }
+
+    .displayContentContainer {
+         width: 70%;
+         margin: auto;
+         padding: 20px;
+    }
+
+    .pgPhotosMobile1, .pgPhotosMobile2 {
+        display: none;
+    }
+
+    .pgPhotos1, .pgPhotos2, .pgPhotos3 {
+        display: block;
+    }
+
+    .hmImgGallery {
+        transition: 0.2s;
+    }
+
+    .hmImgGallery:hover {
+        margin: 10px 0;
+
+        filter: brightness(0.8);
+        cursor: pointer;
+    }
+}
+
+
+/* 900px */
+
+@media only screen and (min-width: 900px) {
+
+    .herosHeading {
+        margin-top: 100px;
+    }
+
+    .heroDisplay {
+        margin-top: 100px;
+    }
+
+    .heroBorderImg {
+        width: 80%;
+        left: -2%;
+        top: -5%;
+    }
+
+    .heroBack {
+        width: 90vw;
+        max-width: 1500px;
+        transform: translate(-50%,-40%) rotate(10deg) scale(0.95);
+    }
+
+    .activeHeroBack {
+        transform: translate(-50%,-40%) rotate(10deg) scale(1);
+    }
+
+    #data h2 {
+        font-size: 3em;
+    }
+
+    #data {
+        width: 70%;
+    }
+
+    .dataDisplay .controls {
+        bottom: 50%;
+        left: 0;
+        transform: rotate(90deg) translate(25%,175px);
+    }
+
+    .dataContain {
+        height: 35vw;
+        max-height: 500px;
+    }
+
+    .dataImg {
+        width: 60vw;
+        max-width: 800px;
+        transform: rotateX(90deg) rotateY(0);
+    }
+
+    .dataActive {
+        transform: rotateX(0) rotateY(0);
+    }
+
+    .dataImg:not(.dataImg:nth-of-type(2)) {
+        height: 38vw;
+        max-height: 500px;
+        width: 60vw;
+        padding-left: 3vw;
+    }
+
+    .dataExplain {
+        width: 400px;
+    }
+
+    .exampleTile:nth-of-type(odd) {
+        margin-right: 50%;
+    }
+
+    .exampleTile:nth-of-type(even) {
+        margin-left: 50%;
+    }
+
+    #cv-iframe-embed {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .formNotes .logo {
+        width: 300px;
+    }
+
+    .infoDisplay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 250px;
+        height: 100%;
+        width: auto;
+    }
+
+    .infoCard h2 {
+        text-align: left;
+        margin: 0 50px;
+    }
+
+    .infoCard a:first-of-type {
+        margin: 10px 0 0 50px;
+        border-radius: 20px 5px 5px 5px;
+        border-top: 5px solid var(--b);
+        border-left: 5px solid var(--b);
+        text-align: left;
+        background: transparent;
+    }
+
+    .infoCard a:first-of-type:hover {
+        background: var(--c);
+        border-radius: 5px;
+    }
+
+    .infoCard p {
+        margin: 30px 50px;
+    }
+
+    /* || HOW WE HELP */
+
+    h2.helpHeading {
+        padding: 20px 0 70px 0;
+        width: 500px;
+    }
+
+    .hmHeader {
+         font-size: 1.5em;
+    }
+
+    .hmSubtitle {
+         font-size: 1em;
+         padding-top: 2px;
+    }
+
+}
