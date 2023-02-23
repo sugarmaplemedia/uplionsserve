@@ -1,5 +1,7 @@
 {
     "redirects": [
+        { "source": "/cc", "destination": "/childhoodcancer" },
+        { "source": "/dad", "destination": "/defenseagainstdiabetes" },
         { "source": "/cc/:path", "destination": "/childhoodcancer/:path" },
         { "source": "/childhood-cancer/:path", "destination": "/childhoodcancer/:path" },
         { "source": "/itrekkedtheup", "destination": "/childhoodcancer/events/itrekkedtheup" },
