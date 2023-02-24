@@ -9,5 +9,6 @@
         { "source": "/childhoodcancer/events/bike4kids", "destination": "https://tourdayoopeh.com/childhoodcancer" },
         { "source": "/dad/:path", "destination": "/defenseagainstdiabetes/:path" },
         { "source": "/defense-against-diabetes/:path", "destination": "/defenseagainstdiabetes/:path" }
-    ]
+    ],
+    "trailingSlash": false  
 }
