@@ -629,7 +629,7 @@ main.cause div.introBanner .logoPreview a img {
     transition: .85s cubic-bezier(.61, .16, .07, 1.46);
 }
 main.cause div.introBanner .logoPreview a.hg img {
-    max-height: 100px;
+    max-height: 80px;
 }
 main.cause div.introBanner .logoPreview img:hover {
     transform: scale(1.1);
@@ -650,6 +650,10 @@ main.cause div.programBanner.dad {
     background: radial-gradient(circle at top center,#c1d7ff,#0055b7);
 }
 
+main.cause div.programBanner.pks {
+    background: radial-gradient(circle at top center,#F1CF97,#EE2A7B);
+}
+
 main.cause div.programBanner.hg {
     background: radial-gradient(circle at top center,#D6CE2E,#39B54A);
 }
@@ -658,6 +662,10 @@ main.cause div.programBanner .logoImgLink img {
     height: 100px;
     display: block;
     margin: 0 auto 30px auto;
+}
+
+main.cause div.programBanner.pks img.programLogo {
+    height: 65px;
 }
 
 main.cause div.programBanner.hg img.programLogo {
@@ -969,6 +977,10 @@ main.cause footer div.footerButtons a {
         max-width: 700px;
     }
 
+    main.cause div.introBanner a.hg img {
+        height: 60px;
+    }
+
     main.cause div.introBanner div.logoPreviewMobileTip {
         display: none;
     }
@@ -1036,6 +1048,10 @@ main.cause footer div.footerButtons a {
         background: radial-gradient(circle at top right,#c1d7ff,#0055b7);
     }
 
+    main.cause div.programBanner.pks {
+        background: radial-gradient(circle at top right,#F1CF97,#EE2A7B);
+    }
+
     main.cause div.programBanner.hg {
         background: radial-gradient(circle at top right,#D6CE2E,#39B54A);
     }
@@ -1055,6 +1071,10 @@ main.cause footer div.footerButtons a {
 
     main.cause div.programBanner.dad img.programLogo {
         width: 20vw;
+    }
+
+    main.cause div.programBanner.pks img.programLogo {
+        height: 90px;
     }
 
     main.cause div.programBanner.hg img.programLogo {
